@@ -476,6 +476,16 @@ pub const CLASSES: ClassExports = objc_classes! {
     msg![env; this objectForKey:key]
 }
 
+- (id)valueForKeyPath:(id)key { // NSString*
+    let keypaths = to_rust_string(env, key);
+    let mut result = this;
+    for part in keypaths.split('.') {
+        let newKey = from_rust_string(env, part.to_string());
+        result = msg![env; result objectForKey:newKey];
+    };
+    result
+}
+
 // NSDictionary(NSFileAttributes) category
 // TODO: implement categories properly
 - (id)fileModificationDate {

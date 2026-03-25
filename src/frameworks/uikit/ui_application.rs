@@ -7,6 +7,7 @@
 
 use super::ui_device::*;
 use crate::dyld::{export_c_func, ConstantExports, FunctionExports, HostConstant};
+use crate::frameworks::core_graphics::{CGFloat, CGPoint, CGRect, CGSize};
 use crate::frameworks::foundation::ns_string::{from_rust_string, get_static_str};
 use crate::frameworks::foundation::{ns_array, ns_string, NSInteger, NSUInteger};
 use crate::mem::MutPtr;
@@ -212,6 +213,20 @@ pub const CLASSES: ClassExports = objc_classes! {
 }
 - (())setApplicationIconBadgeNumber:(NSInteger)bn {
     log!("TODO: ignoring setApplicationIconBadgeNumber:{}", bn);
+}
+
+- (CGRect)statusBarFrame {
+    // TODO: make this real implementation
+    CGRect {
+            origin: CGPoint {
+                x: 0.0,
+                y: 0.0,
+            },
+            size: CGSize {
+                width: 480.0,
+                height: 20.0,
+            },
+    }
 }
 
 // UIResponder implementation

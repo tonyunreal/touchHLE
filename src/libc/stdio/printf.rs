@@ -703,6 +703,10 @@ fn printf(env: &mut Environment, format: ConstPtr<u8>, args: DotDotDot) -> i32 {
 }
 
 // TODO: more printf variants
+fn wprintf(env: &mut Environment, format: ConstPtr<u16>, args: DotDotDot) -> i32 {
+    // no implementation
+    0
+}
 
 /// A simple wrapper around [sscanf_common_generic] for the case of C string.
 fn sscanf_common(
@@ -1210,6 +1214,7 @@ pub const FUNCTIONS: FunctionExports = &[
     export_c_func!(swprintf(_, _, _, _)),
     export_c_func!(vswprintf(_, _, _, _)),
     export_c_func!(printf(_, _)),
+    export_c_func!(wprintf(_, _)),
     export_c_func!(fprintf(_, _, _)),
     export_c_func!(vfprintf(_, _, _)),
 ];

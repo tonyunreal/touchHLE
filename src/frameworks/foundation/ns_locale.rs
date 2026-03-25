@@ -8,6 +8,7 @@
 use super::{ns_array, ns_string};
 use crate::dyld::{ConstantExports, HostConstant};
 use crate::frameworks::core_foundation::cf_locale::kCFLocaleCountryCode;
+use crate::frameworks::foundation::ns_string::from_rust_string;
 use crate::objc::{id, nil, objc_classes, release, retain, ClassExports, HostObject, NSZonePtr};
 use crate::options::Options;
 use crate::window::{get_preferred_country_codes, get_preferred_language_codes};
@@ -182,6 +183,10 @@ pub const CLASSES: ClassExports = objc_classes! {
         },
         _ => unimplemented!()
     }
+}
+
+- (id)localeIdentifier {
+    from_rust_string(env, "en".to_string())
 }
 
 @end

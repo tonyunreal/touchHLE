@@ -202,6 +202,10 @@ pub const CLASSES: ClassExports = objc_classes! {
     next_responder
 }
 
+- (()) presentModalViewController:(id)modalViewController animated:(bool) animated {
+    // TODO: incomplete implementation
+}
+
 @end
 
 };

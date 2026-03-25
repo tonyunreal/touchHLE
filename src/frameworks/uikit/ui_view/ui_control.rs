@@ -69,6 +69,18 @@ const UIControlStateSelected: UIControlState = 1 << 2;
 #[allow(dead_code)]
 const UIControlStateFocused: UIControlState = 1 << 3;
 
+type UIControlContentVerticalAlignment  = NSUInteger;
+pub const UIControlContentVerticalAlignmentCenter: UIControlContentVerticalAlignment = 0;
+pub const UIControlContentVerticalAlignmentTop: UIControlContentVerticalAlignment = 1 << 0;
+pub const UIControlContentVerticalAlignmentBottom: UIControlContentVerticalAlignment = 1 << 1;
+pub const UIControlContentVerticalAlignmentFill: UIControlContentVerticalAlignment = 1 << 2;
+
+type UIControlContentHorizontalAlignment  = NSUInteger;
+pub const UIControlContentHorizontalAlignmentCenter: UIControlContentHorizontalAlignment = 0;
+pub const UIControlContentHorizontalAlignmentLeft: UIControlContentHorizontalAlignment = 1 << 0;
+pub const UIControlContentHorizontalAlignmentRight: UIControlContentHorizontalAlignment = 1 << 1;
+pub const UIControlContentHorizontalAlignmentFill: UIControlContentHorizontalAlignment = 1 << 2;
+
 fn send_actions(env: &mut Environment, this: id, event: id, control_event: UIControlEvents) {
     log_dbg!(
         "Control event {:?} in control {:?} for event {:?}",

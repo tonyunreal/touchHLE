@@ -152,4 +152,17 @@ pub const CLASSES: ClassExports = objc_classes! {
 
 @end
 
+@implementation UINavigationBar: UIView
+
+@end
+
+@implementation UINavigationItem: NSObject
+
+- (id)initWithCoder:(id)coder {
+    // TODO: fix this implementation
+    this
+}
+
+@end
+
 };

@@ -6,6 +6,7 @@
 //! `NSData` and `NSMutableData`.
 
 use super::ns_string::to_rust_string;
+use super::ns_string::from_rust_string;
 use super::{NSRange, NSUInteger};
 use crate::frameworks::foundation::ns_keyed_unarchiver::decode_current_data;
 use crate::fs::GuestPath;
@@ -14,6 +15,10 @@ use crate::objc::{
     autorelease, id, msg, nil, objc_classes, release, retain, ClassExports, HostObject, NSZonePtr,
 };
 use crate::{msg_class, Environment};
+
+type NSDataReadingOptions = NSUInteger;
+pub const NSDataReadingMappedIfSafe : NSDataReadingOptions = 0;
+pub const NSDataReadingUncached : NSDataReadingOptions = 1 << 0;
 
 pub(super) struct NSDataHostObject {
     pub(super) bytes: MutVoidPtr,
@@ -78,6 +83,12 @@ pub const CLASSES: ClassExports = objc_classes! {
     autorelease(env, new)
 }
 
++ (id)dataWithContentsOfURL:(id)url options:(NSDataReadingOptions)options error:(id)error{
+    let new: id = msg![env; this alloc];
+    let new: id = msg![env; new initWithContentsOfURL:url];
+    autorelease(env, new)
+}
+
 + (id)dataWithData:(id)data {
     let new: id = msg![env; this alloc];
     let new: id = msg![env; new initWithData:data];
@@ -122,12 +133,18 @@ pub const CLASSES: ClassExports = objc_classes! {
 
 - (id)initWithContentsOfURL:(id)url { // NSURL *
     let path: id = msg![env; url absoluteString];
-    let path = to_rust_string(env, path);
-    // TODO: file URL case
-    assert!(path.starts_with("http"));
-    log!("TODO: ignoring [(NSData*){:?} initWithContentsOfURL:{:?}]", this, path);
-    // TODO: actually load data once we have proper network support
-    nil
+    let rustPath = to_rust_string(env, path);
+
+    if rustPath.starts_with("http") {
+        assert!(rustPath.starts_with("http"));
+        log!("TODO: ignoring [(NSData*){:?} initWithContentsOfURL:{:?}]", this, rustPath);
+        // TODO: actually load data once we have proper network support
+        return nil;
+    }
+    else {
+    // file URL case
+        msg![env; this initWithContentsOfFile:path]
+    }
 }
 
 - (id)initWithContentsOfFile:(id)path {

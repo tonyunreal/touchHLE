@@ -1,0 +1,31 @@
+ADDED:
+---------
+
+10000000:  added UIInterfaceOrientationUpsideDown
+Baseball 10: added UIButton setVerticalAlignment and setHorizontalAlignment stubs
+DDR S: added UIFont.pointSize stub
+	(this actually gets the tutorial running)
+Dungeon Raid: added NSDateFormatter.setTimeStyle stub
+Fieldrunners: added NSData.dataWithContentsOfURL:options:error: and fixed initWithContentsOfURL
+geoDefense: added NSXMLParser.parserError stub
+Game Dev Story: added srandev stub
+iBlast Moki: added NSLocale.localIdentifier stub
+Jetpack Joyride: added NSCachesDirectory
+Minigore: added MFMailComposeViewController
+Mahjong Elements: added sramdomdev stub, NSNumber.numberWithUnsignedLong
+Peggle: added wprintf stub
+Pocketball: added NSNumber.numberWithUnsignedInteger
+Rage: added NSThread.setName, added UIViewController.presentModalViewController stub
+Snail Mail: added UIApplication.statusBarFrame
+	(this makes the game reaching title screen)
+Where's My Water: added UINavigationView
+Wild West Pinball: added NSDictionary.valueForKeyPath
+
+FIXED:
+--------
+
+TODO:
+-------
+Write a working NSBundle instance class
+Write a working NSBundle.pathsForResourcesOfType:inDirectory:
+

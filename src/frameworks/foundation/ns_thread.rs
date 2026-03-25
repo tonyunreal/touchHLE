@@ -44,6 +44,7 @@ struct NSThreadHostObject {
     finished: bool,
     stack_size: NSUInteger,
     tolerate_type_mismatch: bool,
+    thread_name: id,
 }
 impl HostObject for NSThreadHostObject {}
 
@@ -63,6 +64,7 @@ pub const CLASSES: ClassExports = objc_classes! {
         finished: false,
         stack_size: Mem::SECONDARY_THREAD_DEFAULT_STACK_SIZE,
         tolerate_type_mismatch: false,
+        thread_name: nil,
     });
     env.objc.alloc_object(this, host_object, &mut env.mem)
 }
@@ -212,6 +214,15 @@ pub const CLASSES: ClassExports = objc_classes! {
     log!("TODO: [(NSThread *){:?} isCancelled]", this);
     false
 }
+
+- (())setName:(id)name { // NSString *
+    // @property(copy), name has to be copied
+    env.objc.borrow_mut::<NSThreadHostObject>(this).thread_name = msg![env; name copy];
+}
+- (id)name {
+    env.objc.borrow::<NSThreadHostObject>(this).thread_name
+}
+
 
 - (())dealloc {
     log_dbg!("[(NSThread*){:?} dealloc]", this);

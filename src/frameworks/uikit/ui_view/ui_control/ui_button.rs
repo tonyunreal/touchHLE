@@ -10,6 +10,8 @@ use crate::frameworks::core_graphics::{CGFloat, CGPoint, CGRect};
 use crate::frameworks::foundation::ns_string::{from_rust_string, get_static_str, to_rust_string};
 use crate::frameworks::foundation::NSInteger;
 use crate::frameworks::uikit::ui_font::UITextAlignmentCenter;
+use crate::frameworks::uikit::ui_view::ui_control::UIControlContentVerticalAlignment;
+use crate::frameworks::uikit::ui_view::ui_control::UIControlContentHorizontalAlignment;
 use crate::objc::{
     autorelease, id, impl_HostObject_with_superclass, msg, msg_class, msg_super, nil, objc_classes,
     release, retain, todo_objc_setter, ClassExports, HostObject, NSZonePtr,
@@ -389,6 +391,14 @@ pub const CLASSES: ClassExports = objc_classes! {
     } else {
         nil
     }
+}
+
+- (())setContentVerticalAlignment:(UIControlContentVerticalAlignment)alignment {
+    // TODO: implement this
+}
+
+- (())setContentHorizontalAlignment:(UIControlContentHorizontalAlignment)alignment {
+    // TODO: implement this
 }
 
 @end

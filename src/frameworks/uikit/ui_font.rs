@@ -149,6 +149,11 @@ pub const CLASSES: ClassExports = objc_classes! {
     (font.ascent(host_object.size) - font.descent(host_object.size) + font.line_gap(host_object.size)).ceil()
 }
 
+- (CGFloat)pointSize {
+    let host_object = env.objc.borrow::<UIFontHostObject>(this);
+    return host_object.size
+}
+
 @end
 
 };

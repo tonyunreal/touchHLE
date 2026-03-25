@@ -253,6 +253,10 @@ pub const CLASSES: ClassExports = objc_classes! {
     true
 }
 
+- (id)parserError {
+    nil
+}
+
 - (())dealloc {
     let &NSXMLParserHostObject { data, .. } = env.objc.borrow(this);
     release(env, data);
