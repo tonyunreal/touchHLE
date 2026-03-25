@@ -223,6 +223,10 @@ pub const CLASSES: ClassExports = objc_classes! {
     env.objc.borrow::<NSThreadHostObject>(this).thread_name
 }
 
+- (bool)isMainThread {
+    // TODO: implement this
+    true
+}
 
 - (())dealloc {
     log_dbg!("[(NSThread*){:?} dealloc]", this);

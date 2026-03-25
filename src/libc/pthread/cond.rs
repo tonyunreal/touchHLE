@@ -101,6 +101,16 @@ pub fn pthread_cond_wait(
     0 // success
 }
 
+pub fn pthread_cond_timedwait_relative_np(
+    env: &mut Environment,
+    cond: MutPtr<pthread_cond_t>,
+    mutex: MutPtr<pthread_mutex_t>,
+    ts: i32,
+) -> i32 {
+    pthread_cond_wait(env, cond, mutex);
+    0
+}
+
 pub fn pthread_cond_signal(env: &mut Environment, cond: MutPtr<pthread_cond_t>) -> i32 {
     let cond_var = env.mem.read(cond);
     let host_object = State::get_mut(env)
@@ -154,6 +164,7 @@ pub fn pthread_cond_destroy(env: &mut Environment, cond: MutPtr<pthread_cond_t>)
 pub const FUNCTIONS: FunctionExports = &[
     export_c_func!(pthread_cond_init(_, _)),
     export_c_func!(pthread_cond_wait(_, _)),
+    export_c_func!(pthread_cond_timedwait_relative_np(_, _, _)),
     export_c_func!(pthread_cond_signal(_)),
     export_c_func!(pthread_cond_broadcast(_)),
     export_c_func!(pthread_cond_destroy(_)),

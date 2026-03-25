@@ -7,7 +7,7 @@
 
 use crate::frameworks::foundation::ns_string::to_rust_string;
 use crate::msg;
-use crate::objc::{id, nil, objc_classes, ClassExports};
+use crate::objc::{id, nil, objc_classes, ClassExports, SEL, msg_super};
 use std::borrow::Cow;
 
 pub const CLASSES: ClassExports = objc_classes! {
@@ -16,9 +16,14 @@ pub const CLASSES: ClassExports = objc_classes! {
 
 @implementation UIWebView: UIView
 
++ (id)instanceMethodSignatureForSelector:(SEL)selector {
+    nil
+}
+
 // NSCoding implementation
-- (id)initWithCoder:(id)_coder {
-    todo!()
+- (id)initWithCoder:(id)coder {
+    let this = msg_super![env; this initWithCoder:coder];
+    this
 }
 
 - (())setScalesPageToFit:(bool)_scales {

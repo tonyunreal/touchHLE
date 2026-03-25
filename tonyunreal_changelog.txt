@@ -2,7 +2,10 @@ ADDED:
 ---------
 
 10000000:  added UIInterfaceOrientationUpsideDown
-Baseball 10: added UIButton setVerticalAlignment and setHorizontalAlignment stubs
+Baseball 10: added UIButton setVerticalAlignment and setHorizontalAlignment stubs, added UIView.exchangeSubviewAtIndex stub
+Bejeweled 2: added pthread_cond_timedwait_relative_np
+BlastOff: added UIWebView.instanceMethodSignatureForSelector stub
+3D Brick Breaker Revolution: added NSObject.performSelector:onThread stub, added UIPickerView.setDataSource stub
 DDR S: added UIFont.pointSize stub
 	(this actually gets the tutorial running)
 Dungeon Raid: added NSDateFormatter.setTimeStyle stub
@@ -13,12 +16,15 @@ iBlast Moki: added NSLocale.localIdentifier stub
 Jetpack Joyride: added NSCachesDirectory
 Minigore: added MFMailComposeViewController
 Mahjong Elements: added sramdomdev stub, NSNumber.numberWithUnsignedLong
+Mega Man II: removed UIWebView panic
+NFS Undercover: added UIFont.systemFontSize
 Peggle: added wprintf stub
 Pocketball: added NSNumber.numberWithUnsignedInteger
 Rage: added NSThread.setName, added UIViewController.presentModalViewController stub
 Snail Mail: added UIApplication.statusBarFrame
 	(this makes the game reaching title screen)
-Where's My Water: added UINavigationView
+Tap Tap Revenge: added NSNetServiceBrowser stub
+Where's My Water: added UINavigationBar and UINavigationItem stubs
 Wild West Pinball: added NSDictionary.valueForKeyPath
 
 FIXED:

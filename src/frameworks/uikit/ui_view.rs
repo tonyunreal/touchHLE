@@ -412,6 +412,10 @@ pub const CLASSES: ClassExports = objc_classes! {
     release(env, this);
 }
 
+- (())exchangeSubviewAtIndex:(NSInteger)index1 withSubviewAtIndex:(NSInteger)index2 {
+    // TODO: not implemented
+}
+
 - (())dealloc {
     let UIViewHostObject {
         layer,

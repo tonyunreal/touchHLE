@@ -274,6 +274,11 @@ forUndefinedKey:(id)key { // NSString*
     () = msg![env; run_loop addTimer:timer forMode:mode];
 }
 
+- (())performSelector:(SEL)sel onThread:(id)thread withObject:(id)arg waitUntilDone:(bool)wait {
+    // TODO: wrong implementation
+    detach_new_thread_inner(env, sel, this, arg, /* tolerate_type_mismatch: */ true)
+}
+
 - (())performSelectorOnMainThread:(SEL)sel withObject:(id)arg waitUntilDone:(bool)wait {
     log_dbg!("performSelectorOnMainThread:{} withObject:{:?} waitUntilDone:{}", sel.as_str(&env.mem), arg, wait);
     if wait && env.current_thread == 0 {

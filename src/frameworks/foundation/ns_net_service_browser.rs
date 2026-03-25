@@ -3,27 +3,25 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
-//! `UIPickerView`.
+//! `NSNetServiceBrowser`.
 
-use crate::objc::{id, objc_classes, todo_objc_setter, ClassExports};
-
-// TODO: rendering
+use crate::objc::{
+    autorelease, id, msg, nil, objc_classes, release, retain, ClassExports, HostObject, NSZonePtr,
+};
 
 pub const CLASSES: ClassExports = objc_classes! {
 
 (env, this, _cmd);
 
-@implementation UIPickerView: UIView
+@implementation NSNetServiceBrowser: NSObject
 
-- (())setShowsSelectionIndicator:(bool)shows {
-    todo_objc_setter!(this, shows);
-}
 - (())setDelegate:(id)_delegate {
     // TODO
 }
 
-- (())setDataSource:(id)dataSource {
-    // TODO: not implemented
+- (())searchForServicesOfType:(id)ofType // NSString
+                     inDomain:(id)domainString {
+    // TODO
 }
 
 @end
