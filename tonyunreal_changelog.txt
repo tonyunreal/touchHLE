@@ -24,6 +24,7 @@ Rage: added NSThread.setName, added UIViewController.presentModalViewController 
 Snail Mail: added UIApplication.statusBarFrame
 	(this makes the game reaching title screen)
 Tap Tap Revenge: added NSNetServiceBrowser stub
+Touch Hockey FS5: added UIView animation stubs, disabled file manager attribute panic
 Where's My Water: added UINavigationBar and UINavigationItem stubs
 Wild West Pinball: added NSDictionary.valueForKeyPath
 
