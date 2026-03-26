@@ -30,6 +30,7 @@ use crate::objc::{
     ClassExports, HostObject, NSZonePtr, ObjC,
 };
 use crate::Environment;
+use crate::mem::MutVoidPtr;
 
 #[derive(Default)]
 pub struct State {
@@ -109,6 +110,16 @@ pub const CLASSES: ClassExports = objc_classes! {
 
 + (Class)layerClass {
     env.objc.get_known_class("CALayer", &mut env.mem)
+}
+
+
++ (())beginAnimations:(id) animationID // NSString *
+                 context:(MutVoidPtr) context {
+    // TODO: not implemented
+}
+
++ (()) commitAnimations {
+    // TODO: not implemented
 }
 
 // TODO: accessors etc

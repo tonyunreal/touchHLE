@@ -394,7 +394,10 @@ pub const CLASSES: ClassExports = objc_classes! {
 
 - (id)attributesOfItemAtPath:(id)path // NSString *
                        error:(MutPtr<id>)error { // NSError **
-    assert!(error.is_null()); // TODO
+    //assert!(error.is_null()); // TODO
+    if !error.is_null() {
+        return nil
+    }
 
     // TODO: other attributes
     log_once!("Warning: NSFileManager attributesOfItemAtPath:error: returns only NSFileType, NSFileModificationDate and NSFileSize attributes!");
