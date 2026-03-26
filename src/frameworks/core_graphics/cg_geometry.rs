@@ -365,6 +365,20 @@ fn CGRectInset(_env: &mut Environment, rect: CGRect, dx: CGFloat, dy: CGFloat) -
     res
 }
 
+fn CGRectIntegral(_env: &mut Environment, rect: CGRect) -> CGRect {
+    let res = CGRect {
+        origin: CGPoint {
+            x: rect.origin.x.abs(),
+            y: rect.origin.y.abs(),
+        },
+        size: CGSize {
+            width: rect.size.width.abs(),
+            height: rect.size.height.abs(),
+        },
+    };
+    res
+}
+
 pub const FUNCTIONS: FunctionExports = &[
     export_c_func!(CGPointEqualToPoint(_, _)),
     export_c_func!(CGSizeEqualToSize(_, _)),
@@ -383,6 +397,7 @@ pub const FUNCTIONS: FunctionExports = &[
     export_c_func!(CGRectIsNull(_)),
     export_c_func!(CGRectOffset(_, _, _)),
     export_c_func!(CGRectInset(_, _, _)),
+    export_c_func!(CGRectIntegral(_)),
 ];
 
 pub const CONSTANTS: ConstantExports = &[

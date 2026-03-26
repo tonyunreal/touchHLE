@@ -19,7 +19,7 @@ Mahjong Elements: added sramdomdev stub, NSNumber.numberWithUnsignedLong
 Mega Man II: removed UIWebView panic
 NFS Undercover: added UIFont.systemFontSize
 Peggle: added wprintf stub
-Pocketball: added NSNumber.numberWithUnsignedInteger
+Pocketball: added NSNumber.numberWithUnsignedInteger and CGRectIntegral
 Rage: added NSThread.setName, added UIViewController.presentModalViewController stub
 Snail Mail: added UIApplication.statusBarFrame
 	(this makes the game reaching title screen)
