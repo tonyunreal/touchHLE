@@ -168,6 +168,10 @@ pub const CLASSES: ClassExports = objc_classes! {
     this
 }
 
+- (id)initWithContentsOfFile:(id)path options:(NSDataReadingOptions)options error:(id)error{
+    msg![env; this initWithContentsOfFile:path]
+}
+
 - (id)initWithContentsOfMappedFile:(id)path {
     log_dbg!("[NSData initWithContentsOfMappedFile:] not using memory mapping");
     msg![env; this initWithContentsOfFile:path]

@@ -22,6 +22,7 @@ NFS Undercover: added UIFont.systemFontSize
 Peggle: added wprintf stub
 Pocketball: added NSNumber.numberWithUnsignedInteger and CGRectIntegral
 Rage: added NSThread.setName, added UIViewController.presentModalViewController stub
+Real Racing 3: added NSData.initWithContentsOfFile:options:error:
 Snail Mail: added UIApplication.statusBarFrame
 	(this makes the game reaching title screen)
 Tap Tap Revenge: added NSNetServiceBrowser stub
