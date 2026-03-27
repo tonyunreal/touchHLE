@@ -4,6 +4,7 @@ ADDED:
 10000000:  added UIInterfaceOrientationUpsideDown
 Baseball 10: added UIButton setVerticalAlignment and setHorizontalAlignment stubs, added UIView.exchangeSubviewAtIndex stub
 Bejeweled 2: added pthread_cond_timedwait_relative_np
+Bejeweled Blitz: actually fixing NSCachesDirectory
 BlastOff: added UIWebView.instanceMethodSignatureForSelector stub
 3D Brick Breaker Revolution: added NSObject.performSelector:onThread stub, added UIPickerView.setDataSource stub
 DDR S: added UIFont.pointSize stub

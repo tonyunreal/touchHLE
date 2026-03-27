@@ -541,7 +541,7 @@ impl Fs {
 
         let bundle_guest_path = home_directory.join(&bundle_dir_name);
 
-        let directories = ["Documents", "Library", "tmp"];
+        let directories = ["Documents", "Library", "Caches", "tmp"];
         let host_path_directories = directories.map(|dir| {
             if !read_only_mode {
                 let path = paths::user_data_base_path()
