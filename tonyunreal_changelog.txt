@@ -11,6 +11,7 @@ DDR S: added UIFont.pointSize stub
 	(this actually gets the tutorial running)
 Dungeon Raid: added NSDateFormatter.setTimeStyle stub
 Fieldrunners: added NSData.dataWithContentsOfURL:options:error: and fixed initWithContentsOfURL
+Fieldrunners 2: disabled NSUserDomainMask panic, added strpbrk and audio_session from XaView fork
 geoDefense: added NSXMLParser.parserError stub
 Game Dev Story: added srandev stub
 iBlast Moki: added NSLocale.localIdentifier stub
@@ -23,11 +24,12 @@ Peggle: added wprintf stub
 Pocketball: added NSNumber.numberWithUnsignedInteger and CGRectIntegral
 Rage: added NSThread.setName, added UIViewController.presentModalViewController stub
 Real Racing 3: added NSData.initWithContentsOfFile:options:error:
+Shadow Gun: added UIDevice.isGeneratingDeviceOrientationNotifications
 Snail Mail: added UIApplication.statusBarFrame
 	(this makes the game reaching title screen)
 Tap Tap Revenge: added NSNetServiceBrowser stub
 Touch Hockey FS5: added UIView animation stubs, disabled file manager attribute panic
-Where's My Water: added UINavigationBar and UINavigationItem stubs, added UIDevice.isGeneratingDeviceOrientationNotifications
+Where's My Water: added UINavigationBar and UINavigationItem stubs
 Wild West Pinball: added NSDictionary.valueForKeyPath
 
 FIXED:

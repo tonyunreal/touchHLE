@@ -60,8 +60,8 @@ fn NSSearchPathForDirectoriesInDomains(
     expand_tilde: bool,
 ) -> id {
     // TODO: other cases not implemented
-    assert!(domain_mask == NSUserDomainMask);
-    assert!(expand_tilde);
+    //assert!(domain_mask == NSUserDomainMask);
+    //assert!(expand_tilde);
 
     let dir = match directory {
         NSApplicationDirectory => {

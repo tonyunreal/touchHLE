@@ -306,6 +306,24 @@ fn strlcpy(
     GenericChar::<u8>::strlcpy(env, dst, src, size)
 }
 
+fn strpbrk(env: &mut Environment, s: ConstPtr<u8>, charset: ConstPtr<u8>) -> ConstPtr<u8> {
+    if s.is_null() || charset.is_null() {
+        return Ptr::null();
+    }
+    let sep = env.mem.cstr_at(charset);
+    let mut i = 0;
+    loop {
+        let c = env.mem.read(s + i);
+        if c == b'\0' {
+            return Ptr::null();
+        }
+        if sep.contains(&c) {
+            return s + i;
+        }
+        i += 1;
+    }
+}
+
 pub const FUNCTIONS: FunctionExports = &[
     export_c_func!(strtok(_, _)),
     export_c_func!(bzero(_, _)),
@@ -339,5 +357,6 @@ pub const FUNCTIONS: FunctionExports = &[
     export_c_func!(strstr(_, _)),
     export_c_func!(strchr(_, _)),
     export_c_func!(strrchr(_, _)),
+    export_c_func!(strpbrk(_, _)),
     export_c_func!(strlcpy(_, _, _)),
 ];
