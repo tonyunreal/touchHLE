@@ -143,6 +143,10 @@ pub const CLASSES: ClassExports = objc_classes! {
     }
 }
 
+- (bool)isGeneratingDeviceOrientationNotifications {
+    false
+}
+
 @end
 
 };
