@@ -5,13 +5,13 @@ ADDED:
 Baseball 10: added UIButton setVerticalAlignment and setHorizontalAlignment stubs, added UIView.exchangeSubviewAtIndex stub
 Bejeweled 2: added pthread_cond_timedwait_relative_np
 Bejeweled Blitz: actually fixing NSCachesDirectory
-BlastOff: added UIWebView.instanceMethodSignatureForSelector stub
+BlastOff: added NSObject.instanceMethodSignatureForSelector stub
 3D Brick Breaker Revolution: added NSObject.performSelector:onThread stub,
 							 added UIPickerView.setDataSource stub,
 							 added UITableViewCell stub
 Civ Revolution: added AudioServicesCreateSystemSoundID
 				(this gets the game to the main menu)
-DDR S: added UIFont.pointSize stub
+DDR S: added UIFont.pointSize stub, added NSObject.methodForSelector stub
 				(this actually gets the tutorial running)
 Dungeon Raid: added NSDateFormatter.setTimeStyle stub
 Fieldrunners: added NSData.dataWithContentsOfURL:options:error: and fixed initWithContentsOfURL

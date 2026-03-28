@@ -80,6 +80,16 @@ pub const CLASSES: ClassExports = objc_classes! {
     msg![env; this description]
 }
 
++ (id)instanceMethodSignatureForSelector:(SEL)selector {
+    log!("TODO: instanceMethodSignatureForSelector is not implemented, the app might crash at this point.");
+    nil
+}
+
+- (id)methodForSelector:(SEL)selector {
+    log!("TODO: methodForSelector is not implemented, the app might crash at this point.");
+    nil
+}
+
 - (id)init {
     this
 }

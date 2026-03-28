@@ -16,10 +16,6 @@ pub const CLASSES: ClassExports = objc_classes! {
 
 @implementation UIWebView: UIView
 
-+ (id)instanceMethodSignatureForSelector:(SEL)selector {
-    nil
-}
-
 // NSCoding implementation
 - (id)initWithCoder:(id)coder {
     let this = msg_super![env; this initWithCoder:coder];
