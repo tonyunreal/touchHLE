@@ -1,5 +1,5 @@
-ADDED:
----------
+Improvements from this repo:
+----------------------------
 10000000: added UIInterfaceOrientationUpsideDown
 Baseball 10: added UIButton setVerticalAlignment and setHorizontalAlignment stubs, 
 			 added UIView.exchangeSubviewAtIndex stub
@@ -43,13 +43,17 @@ Touch Hockey FS5: added UIView animation stubs, disabled file manager attribute 
 Where's My Water: added UINavigationBar and UINavigationItem stubs
 Wild West Pinball: added NSDictionary.valueForKeyPath
 
-FIXED:
---------
+Improvements merged from elsewhere:
+-----------------------------------
+(upstream) Battleheart, Samurai II, Zombieville: pthread_get_stacksize_np() and pthread_get_stackaddr_np()
+
+Promoted to working from this repo:
+-----------------------------------
 Romance of the Three Kingdoms TOUCH: 
 		now playable, some actions (domestic - recuit, system - save) crashes the game
 
-TODO:
--------
+Future to-do list:
+------------------
 Write a working NSBundle instance class
 Write a working NSBundle.pathsForResourcesOfType:inDirectory:
 Write some kind of implementation / workaround for UIAlertView 

@@ -67,7 +67,7 @@ pub struct Thread {
     context: Option<Box<cpu::CpuContext>>,
     /// Address range of this thread's stack, used to check if addresses are in
     /// range while producing a stack trace.
-    stack: Option<std::ops::RangeInclusive<u32>>,
+    pub stack: Option<std::ops::RangeInclusive<u32>>,
 }
 
 impl Thread {
