@@ -5,13 +5,20 @@
  */
 //! `UITableView`.
 
-use crate::frameworks::core_graphics::{CGPoint, CGRect, CGSize};
+use crate::frameworks::core_graphics::{CGPoint, CGRect, CGSize, CGFloat};
 use crate::frameworks::foundation::NSInteger;
 use crate::frameworks::uikit::ui_view::ui_scroll_view::UIScrollViewHostObject;
 use crate::objc::{
     id, impl_HostObject_with_superclass, msg, nil, objc_classes, todo_objc_setter, ClassExports,
     NSZonePtr, SEL,
 };
+use crate::{msg_super};
+
+pub type UITableViewStyle = NSInteger;
+#[allow(unused)]
+pub const UITableViewStylePlain: UITableViewStyle = 0;
+#[allow(unused)]
+pub const UITableViewStyleGrouped: UITableViewStyle = 1 << 0;
 
 pub struct UITableViewHostObject {
     superclass: UIScrollViewHostObject,
@@ -41,6 +48,11 @@ pub const CLASSES: ClassExports = objc_classes! {
     env.objc.alloc_object(this, host_object, &mut env.mem)
 }
 
+- (id)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
+    let this: id = msg_super![env; this initWithFrame:frame];
+    this
+}
+
 - (id)delegate {
     env.objc.borrow::<UITableViewHostObject>(this).delegate
 }
@@ -53,6 +65,18 @@ pub const CLASSES: ClassExports = objc_classes! {
 }
 - (())setDataSource:(id)dataSource {
     env.objc.borrow_mut::<UITableViewHostObject>(this).dataSource = dataSource;
+}
+
+- (())setRowHeight:(CGFloat)height {
+
+}
+
+- (())setShowsVerticalScrollIndicator:(bool)showIndicator {
+
+}
+
+- (())setShowsHorizontalScrollIndicator:(bool)showIndicator {
+    
 }
 
 @end

@@ -12,7 +12,9 @@ BlastOff: added NSObject.instanceMethodSignatureForSelector stub
 Civ Revolution: added AudioServicesCreateSystemSoundID
 				(this gets the game to the main menu)
 DDR S: added UIFont.pointSize stub, added NSObject.methodForSelector stub
-				(this actually gets the tutorial running)
+	   (this actually gets the tutorial running)
+Doodle Jump: added more UITableView method stubs
+			 (this gets us to the title screen, but blocked by UIAlertView)
 Dungeon Raid: added NSDateFormatter.setTimeStyle stub
 Fieldrunners: added NSData.dataWithContentsOfURL:options:error: and fixed initWithContentsOfURL
 Fieldrunners 2: disabled NSUserDomainMask panic, added strpbrk and audio_session from XaView fork
@@ -46,4 +48,5 @@ TODO:
 -------
 Write a working NSBundle instance class
 Write a working NSBundle.pathsForResourcesOfType:inDirectory:
-
+Write some kind of implementation / workaround for UIAlertView 
+Write a working UITableView
