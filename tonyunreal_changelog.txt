@@ -25,6 +25,7 @@ Minigore: added MFMailComposeViewController
 Mahjong Elements: added sramdomdev stub, NSNumber.numberWithUnsignedLong
 Mega Man II: removed UIWebView panic
 NFS Undercover: added UIFont.systemFontSize
+Orbital: added kAudioSessionProperty_AudioRoute
 Peggle: added wprintf stub
 Piano Complete: added UITableView and MPVolumeView stub
 Pocketball: added NSNumber.numberWithUnsignedInteger and CGRectIntegral
