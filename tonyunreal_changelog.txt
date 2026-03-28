@@ -18,6 +18,7 @@ Fieldrunners: added NSData.dataWithContentsOfURL:options:error: and fixed initWi
 Fieldrunners 2: disabled NSUserDomainMask panic, added strpbrk and audio_session from XaView fork
 geoDefense: added NSXMLParser.parserError stub
 Game Dev Story: added srandev stub
+GeekBench 2: added UITableViewController stub
 iBlast Moki: added NSLocale.localIdentifier stub
 Jetpack Joyride: added NSCachesDirectory
 Minigore: added MFMailComposeViewController
