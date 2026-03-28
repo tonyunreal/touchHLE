@@ -25,7 +25,7 @@ Mahjong Elements: added sramdomdev stub, NSNumber.numberWithUnsignedLong
 Mega Man II: removed UIWebView panic
 NFS Undercover: added UIFont.systemFontSize
 Peggle: added wprintf stub
-Piano Complete: added UITableView stub
+Piano Complete: added UITableView and MPVolumeView stub
 Pocketball: added NSNumber.numberWithUnsignedInteger and CGRectIntegral
 Rage: added NSThread.setName, added UIViewController.presentModalViewController stub
 Real Racing 3: added NSData.initWithContentsOfFile:options:error:
