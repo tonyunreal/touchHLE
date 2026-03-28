@@ -1,8 +1,8 @@
 ADDED:
 ---------
-
-10000000:  added UIInterfaceOrientationUpsideDown
-Baseball 10: added UIButton setVerticalAlignment and setHorizontalAlignment stubs, added UIView.exchangeSubviewAtIndex stub
+10000000: added UIInterfaceOrientationUpsideDown
+Baseball 10: added UIButton setVerticalAlignment and setHorizontalAlignment stubs, 
+			 added UIView.exchangeSubviewAtIndex stub
 Bejeweled 2: added pthread_cond_timedwait_relative_np
 Bejeweled Blitz: actually fixing NSCachesDirectory
 BlastOff: added NSObject.instanceMethodSignatureForSelector stub
@@ -33,9 +33,11 @@ Piano Complete: added UITableView and MPVolumeView stub
 Pocketball: added NSNumber.numberWithUnsignedInteger and CGRectIntegral
 Rage: added NSThread.setName, added UIViewController.presentModalViewController stub
 Real Racing 3: added NSData.initWithContentsOfFile:options:error:
+Romance of the Three Kingdoms TOUCH: added OSMemoryBarrier stub
+									 (working, see below)
 Shadow Gun: added UIDevice.isGeneratingDeviceOrientationNotifications
 Snail Mail: added UIApplication.statusBarFrame
-	(this makes the game reaching title screen)
+			(this makes the game reaching title screen)
 Tap Tap Revenge: added NSNetServiceBrowser stub
 Touch Hockey FS5: added UIView animation stubs, disabled file manager attribute panic
 Where's My Water: added UINavigationBar and UINavigationItem stubs
@@ -43,6 +45,8 @@ Wild West Pinball: added NSDictionary.valueForKeyPath
 
 FIXED:
 --------
+Romance of the Three Kingdoms TOUCH: 
+		now playable, some actions (domestic - recuit, system - save) crashes the game
 
 TODO:
 -------
@@ -50,3 +54,5 @@ Write a working NSBundle instance class
 Write a working NSBundle.pathsForResourcesOfType:inDirectory:
 Write some kind of implementation / workaround for UIAlertView 
 Write a working UITableView
+Write a working NSNumberFormatter
+
