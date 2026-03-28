@@ -6,11 +6,13 @@ Baseball 10: added UIButton setVerticalAlignment and setHorizontalAlignment stub
 Bejeweled 2: added pthread_cond_timedwait_relative_np
 Bejeweled Blitz: actually fixing NSCachesDirectory
 BlastOff: added UIWebView.instanceMethodSignatureForSelector stub
-3D Brick Breaker Revolution: added NSObject.performSelector:onThread stub, added UIPickerView.setDataSource stub
+3D Brick Breaker Revolution: added NSObject.performSelector:onThread stub,
+							 added UIPickerView.setDataSource stub,
+							 added UITableViewCell stub
 Civ Revolution: added AudioServicesCreateSystemSoundID
-	(this gets the game to the main menu)
+				(this gets the game to the main menu)
 DDR S: added UIFont.pointSize stub
-	(this actually gets the tutorial running)
+				(this actually gets the tutorial running)
 Dungeon Raid: added NSDateFormatter.setTimeStyle stub
 Fieldrunners: added NSData.dataWithContentsOfURL:options:error: and fixed initWithContentsOfURL
 Fieldrunners 2: disabled NSUserDomainMask panic, added strpbrk and audio_session from XaView fork
@@ -23,6 +25,7 @@ Mahjong Elements: added sramdomdev stub, NSNumber.numberWithUnsignedLong
 Mega Man II: removed UIWebView panic
 NFS Undercover: added UIFont.systemFontSize
 Peggle: added wprintf stub
+Piano Complete: added UITableView stub
 Pocketball: added NSNumber.numberWithUnsignedInteger and CGRectIntegral
 Rage: added NSThread.setName, added UIViewController.presentModalViewController stub
 Real Racing 3: added NSData.initWithContentsOfFile:options:error:
